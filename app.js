@@ -104,20 +104,10 @@ function readMessages() {
 }
 
 
-
-
 app.get("/:page", (req, res) => {
   const page = req.params.page;
   res.sendFile(path.join(__dirname, "views", `${page}.html`));
 });
-
-/*app.get("/:page", (req, res) => {
-const page = req.params.page;
-res.render(page);
-});*/
-
-
-
 
 
 app.listen(3000, () => {
