@@ -72,20 +72,6 @@ app.post("/newmessage", (req, res) => {
 });
 
 
-app.get("/:page", (req, res) => {
-  const page = req.params.page;
-  res.sendFile(path.join(__dirname, "views", `${page}.html`));
-});
-
-app.get("/:page", (req, res) => {
-const page = req.params.page;
-res.render(page);
-});
-
-
-
-
-
 
 app.post("/ajaxmessage", (req, res) => {
   const newMessage = req.body;
@@ -122,6 +108,23 @@ function readMessages() {
     });
   });
 }
+
+
+
+
+app.get("/:page", (req, res) => {
+  const page = req.params.page;
+  res.sendFile(path.join(__dirname, "views", `${page}.html`));
+});
+
+/*app.get("/:page", (req, res) => {
+const page = req.params.page;
+res.render(page);
+});*/
+
+
+
+
 
 app.listen(3000, () => {
   console.log("Server running on port 3000 ( http://localhost:3000/ )!");
