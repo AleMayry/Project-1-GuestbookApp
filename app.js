@@ -16,22 +16,16 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname, "/views/index.html");
-});
+
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
-
-
-
-
  
-app.get("/guestbook", (req, res) => {
+app.get("/pages/guestbook", (req, res) => {
   readMessages()
     .then((messages) => {
-      res.render("guestbook", { messages });
+      res.render("pages/guestbook", { messages });
     })
     .catch((error) => {
       console.error(error);
@@ -62,7 +56,7 @@ app.post("/newmessage", (req, res) => {
         JSON.stringify(messages, null, 2),
         (err) => {
           if (err) throw err;
-          res.redirect("/guestbook");
+          res.redirect("/pages/guestbook");
         }
       );
     });
