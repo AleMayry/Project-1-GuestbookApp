@@ -25,10 +25,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.get("/:page", (req, res) => {
-    const page = req.params.page;
-    res.sendFile(path.join(__dirname, "views", `${page}.html`));
-  });
+
 
  
 app.get("/guestbook", (req, res) => {
@@ -41,12 +38,6 @@ app.get("/guestbook", (req, res) => {
       res.status(500).send("Error while trying to read messages.");
     });
 });
-
-app.get("/:page", (req, res) => {
-  const page = req.params.page;
-  res.render(page);
-});
-
 
 app.get("/newmessage", (req, res) => {
   res.sendFile(__dirname + "/views/newmessage.html");
@@ -79,6 +70,22 @@ app.post("/newmessage", (req, res) => {
     res.status(400).send("Required to fill all fields.");
   }
 });
+
+
+app.get("/:page", (req, res) => {
+  const page = req.params.page;
+  res.sendFile(path.join(__dirname, "views", `${page}.html`));
+});
+
+app.get("/:page", (req, res) => {
+const page = req.params.page;
+res.render(page);
+});
+
+
+
+
+
 
 app.post("/ajaxmessage", (req, res) => {
   const newMessage = req.body;
@@ -117,7 +124,7 @@ function readMessages() {
 }
 
 app.listen(3000, () => {
-  console.log("Server running on port 3000!");
+  console.log("Server running on port 3000 ( http://localhost:3000/ )!");
 });
 
 /*
