@@ -54,13 +54,15 @@
                 </thead>
                 <tbody>
                     <% messages.forEach((message) => { %>
+
                         <tr>
-                            <td><% message.username %></td>
-                            <td><% message.country %></td>
-                            <td><% message.message %></td>
+                            <td><%= message.username %></td>
+                            <td><%= message.country %></td>
+                            <td><%= message.message %></td>
                         </tr>
+                        
                         <% }); %>
-                </tbody>
+                </tbody> 
             </table>
         </div>
     </main>

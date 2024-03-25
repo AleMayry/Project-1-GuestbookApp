@@ -38,5 +38,15 @@
     "username": "Aleksi",
     "country": "Mäyry",
     "message": "Hello world!"
+  },
+  {
+    "username": "Ale",
+    "country": "Fin",
+    "message": "Hello\r\n"
+  },
+  {
+    "username": "Alex",
+    "country": "Suomi",
+    "message": "Moi"
   }
 ]

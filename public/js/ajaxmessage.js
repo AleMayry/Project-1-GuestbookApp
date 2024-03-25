@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 document
     .getElementById("ajaxMessageForm")
     .addEventListener("submit", (event) => {
@@ -43,57 +41,3 @@ document
 
     });
 
-/*
-    const guestForm = document.getElementById('guestForm'); 
-const guestList = document.getElementById('guestList'); 
-  
-guestForm.addEventListener('submit', function (e) { 
-    e.preventDefault(); 
-  
-    const lastName = document.getElementById('lastName').value; 
-    const firstName = document.getElementById('firstName').value;
-    const email = document.getElementById('email').value; 
-  
-    const guestCard = document.createElement('div'); 
-    guestCard.classList.add('guest-card'); 
-    guestCard.innerHTML = ` 
-                <h2>${lastName}</h2>
-                <h2>${firstName}</h2> 
-                <p><strong>Email:</strong> ${email}</p> 
-                `; 
-  
-    guestList.appendChild(guestCard); 
-  
-    guestForm.reset(); 
-});
-
-guestForm.addEventListener('submit', function (e) { 
-    e.preventDefault(); 
-
-    const lastName = document.getElementById('lastName').value; 
-    const firstName = document.getElementById('firstName').value;
-    const email = document.getElementById('email').value; 
-
-    // AJAX request to the /ajaxmessage route
-    fetch('/ajaxmessage', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            lastName: lastName,
-            firstName: firstName,
-            email: email
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Handle response data if needed
-        console.log(data);
-    })
-    .catch(error => console.error(error));
-
-    // Reset the form
-    guestForm.reset(); 
-});
-*/

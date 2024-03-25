@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
 app.get("/pages/guestbook", (req, res) => {
   readMessages()
     .then((messages) => {
+      console.log(messages);
       res.render("pages/guestbook", { messages });
     })
     .catch((error) => {
