@@ -17,6 +17,7 @@ Sisällysluettelo
 [4	Oma arvio työstä ja oman osaamisen kehittymisestä](#oma-arvio-työstä-ja-oman-osaamisen-kehittymisestä)
 
 [5	Linkit](#linkit)
+
 [5.1	Verkkosivuni osoite](#verkkosivuni-osoite)
 
 [5.2	Linkki GitHub repositorioon](#linkki-github-repositorioon)
