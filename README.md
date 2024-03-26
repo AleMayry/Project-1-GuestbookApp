@@ -1,11 +1,6 @@
-
-
-
-
-	FullStack Projektiraportti 
-
+**FullStack Projektiraportti**
  
-Sisällysluettelo
+# Sisällysluettelo
 
 
 [1	Yleistä tietoa projektista](#yleistä-tietoa-projektista)
@@ -40,7 +35,7 @@ Verkkosovelluksessa on neljä polkua, jotka näkyvät käyttäjälle:
 
 **”/”** -polku toimii html-muotoisena ”etusivuna”, joka toivottaa käyttäjän tervetul-leeksi sivustolle.
 
-**”/guestbook”** – Hakee datan JSON-tiedostosta ja lähettää sen guestbook.ejs poh-jaan käyttäjälle näkyväksi ymmärrettävään muotoon.
+**/guestbook** – Hakee datan JSON-tiedostosta ja lähettää sen guestbook.ejs poh-jaan käyttäjälle näkyväksi ymmärrettävään muotoon.
 
 **/newmessage** – Backend noutaa newmessage.html sivun tiedot ja käyttäjälle tulee näkyviin form/lomake. Lomakkeen tiedot lähetetään käsiteltäväksi. Backend tar-kistaa onko kaikki kentät täytetty formin täytön yhteydessä. Jos kaikki kentät ovat täytetty, tiedot tallentuvat messages.json -tiedostoon. Mikäli jokin kentistä on täyttämättä, sivusto ilmoittaa käyttäjälle virheestä.
 
